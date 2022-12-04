@@ -11,11 +11,27 @@
                            txtDui.Text,
                            txtCorreo.Text)
 
-        If alumno.datosAceptados Then
-            MsgBox("Alumno" & alumno.nombreAlumno & "Registrado")
-        Else
+        datosAlumno.Rows.Add(txtCodigo.Text,
+                             alumno.nombreAlumno,
+                             alumno.apellidoAlumno,
+                             alumno.sexoAlumno,
+                             alumno.direccionAlumno,
+                             alumno.edadAlumno,
+                             alumno.duiAlumno,
+                             alumno.correoAlumno)
 
+        If alumno.datosAceptados Then
+            MsgBox("Alumno" & alumno.nombreAlumno & "Registrado con Exito")
         End If
+
+        txtCodigo.Text = ""
+        txtNombre.Text = ""
+        txtApellido.Text = ""
+        txtSexo.Text = ""
+        txtDireccion.Text = ""
+        txtEdad.Text = ""
+        txtDui.Text = ""
+        txtCorreo.Text = ""
 
     End Sub
 
@@ -25,14 +41,8 @@
 
         Else
             txtCodigo.Text = alumno.generarCodigo(txtNombre.Text)
+
         End If
-    End Sub
-
-    Private Sub lblapellido_Click(sender As Object, e As EventArgs) Handles lblapellido.Click
-
-    End Sub
-
-    Private Sub RegistroAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

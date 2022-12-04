@@ -74,6 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.vb" />
+    <Compile Include="Auto.vb" />
+    <Compile Include="RegistroAuto.Designer.vb">
+      <DependentUpon>RegistroAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RegistroAlumno.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +114,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroAuto.resx">
+      <DependentUpon>RegistroAuto.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

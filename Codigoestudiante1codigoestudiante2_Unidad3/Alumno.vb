@@ -116,7 +116,7 @@
         End If
 
         If nombreA.Length = 0 Then
-            MsgBox("Debe escribir el codigo del alumno")
+            MsgBox("Debe escribir el nombre del alumno")
             Exit Sub
         Else
             nombre = nombreA
@@ -135,7 +135,7 @@
         Else
             sexo = sexoA
         End If
-        If sexoA = "F" Or sexoA = "H" Then
+        If sexoA = "F" Or sexoA = "M" Then
         Else
             MsgBox("Debe escribir F para femenino o M para masculino")
             Exit Sub
@@ -148,7 +148,7 @@
             direccion = direccionA
         End If
 
-        If duiA.Length = 0 & duiA.Length < 9 Then
+        If duiA.Length = 0 Then
             MsgBox("Debe ingresar un numero de dui valido")
         Else
             dui = duiA

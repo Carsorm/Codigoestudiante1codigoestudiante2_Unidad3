@@ -26,6 +26,15 @@ Partial Class RegistroAlumno
         Me.grpCodigo = New System.Windows.Forms.GroupBox()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.grpDatos = New System.Windows.Forms.GroupBox()
+        Me.datosAlumno = New System.Windows.Forms.DataGridView()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.lblcorreo = New System.Windows.Forms.Label()
         Me.txtDui = New System.Windows.Forms.TextBox()
@@ -35,14 +44,15 @@ Partial Class RegistroAlumno
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.lbldireccion = New System.Windows.Forms.Label()
-        Me.txtSexo = New System.Windows.Forms.TextBox()
         Me.lblsexo = New System.Windows.Forms.Label()
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.lblapellido = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.lblnombre = New System.Windows.Forms.Label()
+        Me.txtSexo = New System.Windows.Forms.TextBox()
         Me.grpCodigo.SuspendLayout()
         Me.grpDatos.SuspendLayout()
+        CType(Me.datosAlumno, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnGenerar
@@ -58,7 +68,7 @@ Partial Class RegistroAlumno
         '
         Me.grpCodigo.Controls.Add(Me.txtCodigo)
         Me.grpCodigo.Controls.Add(Me.btnGenerar)
-        Me.grpCodigo.Location = New System.Drawing.Point(51, 12)
+        Me.grpCodigo.Location = New System.Drawing.Point(12, 12)
         Me.grpCodigo.Name = "grpCodigo"
         Me.grpCodigo.Size = New System.Drawing.Size(332, 78)
         Me.grpCodigo.TabIndex = 2
@@ -75,6 +85,7 @@ Partial Class RegistroAlumno
         '
         'grpDatos
         '
+        Me.grpDatos.Controls.Add(Me.datosAlumno)
         Me.grpDatos.Controls.Add(Me.txtCorreo)
         Me.grpDatos.Controls.Add(Me.lblcorreo)
         Me.grpDatos.Controls.Add(Me.txtDui)
@@ -90,12 +101,69 @@ Partial Class RegistroAlumno
         Me.grpDatos.Controls.Add(Me.lblapellido)
         Me.grpDatos.Controls.Add(Me.txtNombre)
         Me.grpDatos.Controls.Add(Me.lblnombre)
-        Me.grpDatos.Location = New System.Drawing.Point(51, 96)
+        Me.grpDatos.Location = New System.Drawing.Point(12, 96)
         Me.grpDatos.Name = "grpDatos"
-        Me.grpDatos.Size = New System.Drawing.Size(686, 342)
+        Me.grpDatos.Size = New System.Drawing.Size(897, 478)
         Me.grpDatos.TabIndex = 3
         Me.grpDatos.TabStop = False
         Me.grpDatos.Text = "Datos Alumno"
+        '
+        'datosAlumno
+        '
+        Me.datosAlumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datosAlumno.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.datosAlumno.Location = New System.Drawing.Point(6, 257)
+        Me.datosAlumno.Name = "datosAlumno"
+        Me.datosAlumno.Size = New System.Drawing.Size(885, 230)
+        Me.datosAlumno.TabIndex = 15
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column8.HeaderText = "Codigo"
+        Me.Column8.Name = "Column8"
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column1.HeaderText = "Nombre"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column2.HeaderText = "Apellido"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column3.HeaderText = "Sexo"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column4.HeaderText = "Direccion"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column5.HeaderText = "Edad"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.HeaderText = "DUI"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column7.HeaderText = "Correo"
+        Me.Column7.Name = "Column7"
         '
         'txtCorreo
         '
@@ -147,7 +215,7 @@ Partial Class RegistroAlumno
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(543, 313)
+        Me.btnAgregar.Location = New System.Drawing.Point(754, 19)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(137, 23)
         Me.btnAgregar.TabIndex = 8
@@ -169,13 +237,6 @@ Partial Class RegistroAlumno
         Me.lbldireccion.Size = New System.Drawing.Size(52, 13)
         Me.lbldireccion.TabIndex = 6
         Me.lbldireccion.Text = "Direccion"
-        '
-        'txtSexo
-        '
-        Me.txtSexo.Location = New System.Drawing.Point(58, 106)
-        Me.txtSexo.Name = "txtSexo"
-        Me.txtSexo.Size = New System.Drawing.Size(62, 20)
-        Me.txtSexo.TabIndex = 5
         '
         'lblsexo
         '
@@ -218,11 +279,18 @@ Partial Class RegistroAlumno
         Me.lblnombre.TabIndex = 0
         Me.lblnombre.Text = "Nombre"
         '
+        'txtSexo
+        '
+        Me.txtSexo.Location = New System.Drawing.Point(58, 106)
+        Me.txtSexo.Name = "txtSexo"
+        Me.txtSexo.Size = New System.Drawing.Size(62, 20)
+        Me.txtSexo.TabIndex = 5
+        '
         'RegistroAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(921, 595)
         Me.Controls.Add(Me.grpDatos)
         Me.Controls.Add(Me.grpCodigo)
         Me.Name = "RegistroAlumno"
@@ -231,6 +299,7 @@ Partial Class RegistroAlumno
         Me.grpCodigo.PerformLayout()
         Me.grpDatos.ResumeLayout(False)
         Me.grpDatos.PerformLayout()
+        CType(Me.datosAlumno, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -242,7 +311,6 @@ Partial Class RegistroAlumno
     Friend WithEvents btnAgregar As Button
     Friend WithEvents txtDireccion As TextBox
     Friend WithEvents lbldireccion As Label
-    Friend WithEvents txtSexo As TextBox
     Friend WithEvents lblsexo As Label
     Friend WithEvents txtApellido As TextBox
     Friend WithEvents lblapellido As Label
@@ -254,4 +322,14 @@ Partial Class RegistroAlumno
     Friend WithEvents lblcorreo As Label
     Friend WithEvents txtDui As TextBox
     Friend WithEvents lbldui As Label
+    Friend WithEvents datosAlumno As DataGridView
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents txtSexo As TextBox
 End Class
